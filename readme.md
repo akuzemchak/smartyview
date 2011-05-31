@@ -2,8 +2,6 @@
 
 A ridiculously simple Smarty 3 library for CodeIgniter 2
 
----
-
 ## Installation
 
 1. Download the latest files from right here.
