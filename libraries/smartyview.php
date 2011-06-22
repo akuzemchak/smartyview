@@ -1,5 +1,12 @@
-<?php
+<?php if(!defined('BASEPATH')) exit('No direct script access allowed');
 
+// set spark version
+define('SMARTYVIEW_VERSION', '0.0.1');
+
+// get smarty lib
+require_once FCPATH.'sparks/smartyview/' .SMARTYVIEW_VERSION. '/vendor/Smarty.class.php';
+
+// main class
 class Smartyview {
 	
 	// global smarty object
@@ -7,9 +14,6 @@ class Smartyview {
 	
 	// construct
 	public function __construct($config) {
-		// get smarty lib
-		require_once APPPATH.'/third_party/smarty/Smarty.class.php';
-		
 		// setup the object
 		$this->smarty = new Smarty();
 		$this->smarty->template_dir = $config['smarty_template_dir'];
