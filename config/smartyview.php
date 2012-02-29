@@ -6,5 +6,6 @@ $config = array(
 	'smarty_template_dir' => APPPATH.'views', // base folder for all your templates
 	'smarty_compile_dir' => APPPATH.'cache/smarty/templates_c', // where templates will be compiled to
 	'smarty_config_dir' => APPPATH.'views/_config', // place to hold template config files
-	'smarty_cache_dir' => APPPATH.'cache/smarty' // universal smarty cache directory
+	'smarty_cache_dir' => APPPATH.'cache/smarty', // universal smarty cache directory
+	'smarty_plugin_dir' => APPPATH.'helpers' //Default plugin directory to "application/helpers/"
 );
