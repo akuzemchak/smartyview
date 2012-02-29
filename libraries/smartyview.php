@@ -20,6 +20,9 @@ class Smartyview {
 		$this->smarty->compile_dir = $config['smarty_compile_dir'];
 		$this->smarty->config_dir = $config['smarty_config_dir'];
 		$this->smarty->cache_dir = $config['smarty_cache_dir'];
+		if(isset($config['smarty_plugin_dir'])) {
+			$this->smarty->addPluginsDir($config['smarty_plugin_dir']);
+		}
 	}
 	
 	// compile and output the template
