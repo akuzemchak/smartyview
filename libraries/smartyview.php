@@ -26,7 +26,7 @@ class Smartyview {
 	}
 	
 	// compile and output the template
-	public function render($template = '', $data = array()) {
+	public function render($template = '', $data = array(), $return = false) {
 		// get codeigniter object
 		$CI =& get_instance();
 		
@@ -36,7 +36,11 @@ class Smartyview {
 		
 		// output the template
 		$output = $this->smarty->fetch($template);
-		$CI->output->append_output($output);
+		if($return) {
+			return $output;
+		}else {
+			$CI->output->append_output($output);
+		}
 	}
 	
 }
