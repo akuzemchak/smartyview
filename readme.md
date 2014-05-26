@@ -2,6 +2,10 @@
 
 A ridiculously simple Smarty 3 Spark for CodeIgniter 2
 
+## Wait! Before You Continue...
+
+**This project is no longer maintained, and will receive no updates or support. Use at your own discretion.**
+
 ## Installation
 
 1. [Get Sparks](http://getsparks.org/install).
