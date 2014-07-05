@@ -20,10 +20,13 @@ class Smartyview {
 		$this->smarty->compile_dir = $config['smarty_compile_dir'];
 		$this->smarty->config_dir = $config['smarty_config_dir'];
 		$this->smarty->cache_dir = $config['smarty_cache_dir'];
+		if(isset($config['smarty_plugin_dir']) && $config['smarty_plugin_dir']) {
+			$this->smarty->addPluginsDir($config['smarty_plugin_dir']);
+		}
 	}
 	
 	// compile and output the template
-	public function render($template = '', $data = array()) {
+	public function render($template = '', $data = array(), $return = false) {
 		// get codeigniter object
 		$CI =& get_instance();
 		
@@ -33,7 +36,11 @@ class Smartyview {
 		
 		// output the template
 		$output = $this->smarty->fetch($template);
-		$CI->output->append_output($output);
+		if($return) {
+			return $output;
+		}else {
+			$CI->output->append_output($output);
+		}
 	}
 	
 }
